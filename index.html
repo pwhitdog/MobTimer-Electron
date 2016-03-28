@@ -1,11 +1,16 @@
 <html>
-    <head>
-        
-    </head>
-    <body>
-        <h1>CROSS PLATFORM MOB TIMER!!!</h1>
-        <script>
-            require('./scripts/app.js')            
-        </script>
-    </body>
+
+<head>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./scripts/app.js"></script>
+</head>
+
+<body>
+    <div ng-app="mobApp">
+        <div ng-controller="mobController">
+            <h1>{{minutes}}:{{secondsDisplay}}</h1>
+        </div>
+    </div>
+</body>
+
 </html>
