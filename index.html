@@ -1,16 +1,28 @@
 <html>
 
 <head>
-    <script src="./node_modules/angular/angular.js"></script>
-    <script src="./scripts/app.js"></script>
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="./css/photon-0.1.2-dist/css/photon.min.css"></link>
+    <link rel="stylesheet" href="./css/app.css"></link>
 </head>
 
 <body>
-    <div ng-app="mobApp">
-        <div ng-controller="mobController">
-            <h1>{{minutes}}:{{secondsDisplay}}</h1>
+    <div ng-app="mobApp" class="window">
+        <header class="toolbar toolbar-header">
+            <h1 class="title">Mob Timer</h1>
+        </header>
+        <div ng-controller="mobController" class="window-content">
+            <div class="padded-more">
+                <h1 ng-if="displayTimer">{{minutes}}:{{secondsDisplay}}</h1>
+                <h1 ng-if="!displayTimer">New Person Yo!</h1>
+                <p>
+                    Enjoy the ride!!!
+                </p>
+            </div>
         </div>
     </div>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./scripts/app.js" charset="utf-8"></script>
 </body>
 
 </html>
